@@ -6,6 +6,7 @@ const inputSizeControl = document.querySelector('#font-size-control')
 const spanText = document.querySelector('#text')
 inputSizeControl.addEventListener('input', (event) => {
     const { target } = event
-    spanText.style.fontSize = `${target.valueAsNumber*2}%`
+    spanText.style.fontSize = `${target.value*2}%`
+    console.log(typeof(target.value))
 })
 

@@ -8,24 +8,13 @@ const inputRef = document.querySelector('#validation-input')
 const dataLength = inputRef.getAttribute('data-length')
 
 inputRef.addEventListener('change', event => {    
-
-    if (event.target.value.length < dataLength){
+    if (event.target.value.length < Number(dataLength)){
         inputRef.classList.add('invalid');
-    }else if (event.target.value.length >= dataLength){
+    }else {
         inputRef.classList.remove('invalid')   
         inputRef.classList.add('valid')
-    }
-    
-    // if (event.target.value.length >= dataLength){   
-    //     inputRef.classList.remove('invalid')   
-    //     inputRef.classList.add('valid')
-    // }else if (event.target.value.length === 0) {
-    //     inputRef.classList.remove('invalid');
-    //     inputRef.classList.remove('valid')
-    // } else {
-    //     inputRef.classList.remove('valid')
-    //     inputRef.classList.add('invalid')
-    // }
+    } 
 })
+
 
 
